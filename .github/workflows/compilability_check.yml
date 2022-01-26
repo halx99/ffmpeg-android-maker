@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     env:
-      NDK_VER: r17
+      NDK_VER: r19c
       NDK_PLAT: linux
     strategy:
       matrix:
