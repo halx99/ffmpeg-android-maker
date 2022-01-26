@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     env:
-      NDK_VER: r19c
+      NDK_VER: r21e
     strategy:
       matrix:
         abi: [ "armeabi-v7a", "arm64-v8a", "x86" ]
