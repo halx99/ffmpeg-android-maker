@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     env:
-      NDK_VER: r19c
+      NDK_VER: r21e
       NDK_PLAT: linux
     strategy:
       matrix:
@@ -27,7 +27,7 @@ jobs:
           export ANDROID_SDK_HOME=$ANDROID_HOME
           export ANDROID_NDK_HOME=`pwd`/android-ndk-${NDK_VER}
           export PATH=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/${NDK_PLAT}-x86_64/bin:$ANDROID_NDK_HOME/toolchains/arm-linux-androideabi-4.9/prebuilt/${NDK_PLAT}-x86_64/bin:$PATH
-          ./ffmpeg-android-maker.sh -all-free -all-gpl -android=21 -abis=${{ matrix.abi }}
+          ./ffmpeg-android-maker.sh -all-free -android=21 -abis=${{ matrix.abi }}
           
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
