@@ -35,10 +35,8 @@ function prepareOutput() {
   OUTPUT_LIB=${OUTPUT_DIR}/lib/${ANDROID_ABI}
   mkdir -p ${OUTPUT_LIB}
   
-  set -e
   cp ${BUILD_DIR_FFMPEG}/${ANDROID_ABI}/lib/*.so ${OUTPUT_LIB}
   cp ${BUILD_DIR_FFMPEG}/${ANDROID_ABI}/lib/*.a ${OUTPUT_LIB}
-  set +e
 
   OUTPUT_HEADERS=${OUTPUT_DIR}/include/${ANDROID_ABI}
   mkdir -p ${OUTPUT_HEADERS}
