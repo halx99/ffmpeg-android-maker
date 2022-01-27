@@ -88,7 +88,7 @@ jobs:
     - name: Prepare dist package
       run: |
         ls
-        zip -q -r ffmpeg-android-4.4.1.zip ffmpeg-android-4.4.1
+        zip -q -r ffmpeg-android-4.4.1${{github.event.inputs.package_suffix}}.zip ffmpeg-android-4.4.1
     - name: Upload dist package to release page
       if: ${{ env.RELEASE_TAG_NAME != '' }}
       uses: softprops/action-gh-release@v1
